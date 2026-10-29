@@ -207,7 +207,6 @@ footer {
 .intro-art {
   flex: 0 1 45%;
   min-width: 0;
-  height: 280px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -216,12 +215,11 @@ footer {
 
 .intro-character {
   display: block;
-  height: 100%;
-  width: auto;
-  max-width: 47%;
+  width: 100%;
+  max-width: 200px; /* Controls maximum size on desktop */
+  height: auto;     /* Preserves natural aspect ratio so they never warp */
   object-fit: contain;
-  object-position: center;
-  border-radius: 8px; /* Rounded corners for intro art */
+  border-radius: 8px;
 }
 
 .intro-info {
@@ -1044,39 +1042,5 @@ footer {
         align-items: flex-start;
         gap: 4px;
         padding: 14px 16px;
-    }
-}
-/* ========================================
-   INTRO ART (DESKTOP & MOBILE FIX)
-   ======================================== */
-
-.intro-art {
-    display: flex;
-    justify-content: flex-start; /* Or center, depending on your layout */
-    align-items: center;
-    gap: 20px;
-}
-
-/* Desktop sizing for the intro character images */
-.intro-art img,
-.intro-character {
-    width: 280px;  /* Set your preferred fixed desktop width here */
-    height: auto;
-    object-fit: contain;
-}
-
-/* Mobile & Tablet Overrides (Only triggers under 750px) */
-@media screen and (max-width: 750px) {
-    .intro-art {
-        justify-content: center;
-        gap: 12px;
-        flex-wrap: nowrap; /* Keeps them side-by-side on mobile */
-    }
-
-    .intro-art img,
-    .intro-character {
-        width: 45% !important; /* Scales them safely on phones without breaking desktop */
-        max-width: 220px;
-        height: auto !important;
     }
 }
