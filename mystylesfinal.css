@@ -253,6 +253,7 @@ footer {
   margin: 12px 0 0;
   font-family: "Average", Georgia, serif;
   font-size: clamp(0.9rem, 1.5vw, 1.4rem);
+  text-align: right;
   line-height: 1.3;
 }
 
