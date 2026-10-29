@@ -1046,3 +1046,90 @@ footer {
         padding: 14px 16px;
     }
 }
+/* ========================================
+   RESPONSIVE HOMEPAGE & GLOBAL MOBILE STYLES
+   ======================================== */
+
+/* Ensure images and media never overflow screen bounds */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tablet & Mobile Breakpoint (768px and below) */
+@media screen and (max-width: 768px) {
+  
+  /* Stack the navbar logo and links vertically on mobile */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 24px !important;
+    text-align: center;
+  }
+
+  /* Center nav links and wrap them nicely */
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 15px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-links li {
+    margin: 0;
+  }
+
+  /* Adjust dropdown menu behavior for touch screens */
+  .nav-links .dropdown-menu {
+    position: static;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+    padding: 5px 0;
+    text-align: center;
+  }
+
+  .nav-links .dropdown-menu li a {
+    padding: 6px 10px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  /* Standardize page container padding on smaller screens */
+  .page-container, 
+  .resume-card, 
+  .contact-card {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  /* Homepage specific adjustments */
+  h1 {
+    font-size: 32px !important;
+  }
+}
+
+/* Small Phones Breakpoint (480px and below) */
+@media screen and (max-width: 480px) {
+  .logo {
+    font-size: 20px !important;
+  }
+
+  .nav-links {
+    gap: 6px 10px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    padding: 4px 6px;
+  }
+}
