@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Welcome!</title>
+  <meta name="description" content="This is the landing page for Mei Lin's portfolio website.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  
+  <link rel="stylesheet" href="mystylesfinal.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Average&family=Gruppo&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Full-width header spanning the entire screen width -->
+<header>
+  <div class="navbar">
+    <div class="logo" style="font-family:'Average';color: #2a4869;">MEI LIN LEE-STAHR</div>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+
+        <li class="dropdown">
+          <a href="javascript:void(0);" class="dropdown-toggle">Projects</a>
+          <ul class="dropdown-menu">
+            <li><a href="film.html">When You Give A Cat A Lemon</a></li>
+            <li><a href="ltq.html">A Letter to Qianjiang</a></li>
+            <li><a href="Projectvizwall.html"> Vizwall Slides </a> </li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="javascript:void(0);" class="dropdown-toggle">Gallery</a>
+          <ul class="dropdown-menu">
+            <li><a href="CharacterDesign.html">Character Design</a></li>
+            <li><a href="Illustration.html">Illustration</a></li>
+            <li><a href="Storyboards.html">Storyboards</a></li>
+            <li><a href="videography.html"> Videography </a> </li>
+          </ul>
+        </li>
+
+        <li><a href="Resume.html">Resume</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="page-container">
+
+  <section class="intro-section">
+    <div class="intro-card">
+
+      <!-- Restored Intro Art Images -->
+      <div class="intro-art">
+        <img
+          src="imagess/charactersmall.jpeg"
+          alt="Character illustration"
+          class="intro-character"
+        />
+        <img
+          src="imagess/myoutfit.png"
+          alt="Character illustration"
+          class="intro-character"
+        />
+      </div>
+
+      <div class="intro-info">
+        <h1 class="intro-name">
+          <span>Mei Lin</span>
+          <span>Lee-Stahr</span>
+        </h1>
+
+        <p class="intro-subtitle">
+          character artist + visual development
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="project">
+    <div class="left">
+      <h2 style="color: #2a4869; text-align: left; margin-top: 0;">
+        Short Film: <i>When You Give a Cat a Lemon</i> 
+      </h2>
+
+      <p>
+      Created for the 2nd Annual Slug48 Film Competition<br>
+      Directed by Mei Lin Lee-Stahr and Calleigh Hoang<br>
+      Won "Best Use of Required Dialogue" ("What just happened?")<br>
+      Official Selection for Mill Valley Film Festival 2026
+      </p>
+    </div>
+
+    <div class="right">
+      <div class="video-wrapper">
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/4L1wHtk53HQ?si=ygvUxdl6OCo_D9rA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="project">
+    <div class="left">
+      <h2 style="color: #2a4869; text-align: left; margin-top: 0;">
+        Short Film: 
+        <i>A Letter to Qianjiang - A Chinese American Adoptee's Journey of Reconnection</i>
+      </h2>
+
+      <p>
+        In my thesis film for my Film and Digital B.A. at UC Santa Cruz, I explore my adopted identity, asking questions about the community I am a part of, yet, have always felt disconnected from. I reconnect with other adoptees from the same city as me and ask about their own stories, ultimately finding the places where our paths overlap, and diverge all at the same time.
+      </p>
+    </div>
+
+    <div class="right">
+      <div class="video-wrapper">
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/sx1tc9J9OdE?si=EUVCBI6iU2lTYynq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="left">
+      <h2 style="color: #2a4869; text-align: left; margin-top: 0;">
+        Design Project: Vizwall Slides
+      </h2>
+
+      <p>
+        A large scale informational presentation created for the space at the David Kirk Digital Scholarship Center at the University Library Center for Digital Scholarship located in McHenry Library at UC Santa Cruz
+      </p>
+    </div>
+
+    <div class="right">
+      <a href="Projectvizwall.html">
+        <img width="1050" height="600" src="imagess/Vizwallsample-min.jpg" alt="A sunset image of a figure sitting on a squiggle structure">
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<footer class="page-container">
+  &copy; 2025 Mei Lin Lee-Stahr
+</footer>
+
+<!-- Image Lightbox Modal -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="modal-close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+<script>
+  document.querySelectorAll('.imggrid img, .imggrid-3 img, .right a img, .intro-character').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', function(e) {
+      if(this.closest('a') && this.closest('a').getAttribute('href') !== '#') return;
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImg');
+      modal.style.display = 'flex';
+      modalImg.src = this.src;
+      modalImg.alt = this.alt;
+    });
+  });
+
+  function closeModal() {
+    document.getElementById('imageModal').style.display = 'none';
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+</script>
+
+</body>
+</html>

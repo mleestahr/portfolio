@@ -1,0 +1,130 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Character Design</title>
+  <meta name="description" content="This page showcases Mei Lin's character designs.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <link rel="stylesheet" href="mystylesfinal.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Average&family=Gruppo&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+ <header>
+  <div class="navbar">
+    <div class="logo" style="font-family:'Average';color: #2a4869;">MEI LIN LEE-STAHR</div>
+
+     <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+
+        <li class="dropdown">
+          <a href="javascript:void(0);" class="dropdown-toggle">Projects</a>
+          <ul class="dropdown-menu">
+            <li><a href="film.html">When You Give A Cat A Lemon</a></li>
+            <li><a href="ltq.html">A Letter to Qianjiang</a></li>
+            <li><a href="Projectvizwall.html"> Vizwall Slides </a> </li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="javascript:void(0);" class="dropdown-toggle">Gallery</a>
+          <ul class="dropdown-menu">
+            <li><a href="CharacterDesign.html">Character Design</a></li>
+            <li><a href="Illustration.html">Illustration</a></li>
+            <li><a href="Storyboards.html">Storyboards</a></li>
+            <li><a href="videography.html"> Videography </a> </li>
+          </ul>
+        </li>
+
+        <li><a href="Resume.html">Resume</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main class="page-container">
+
+    <h1 class="page-title" style="color: #2a4869;">
+      Character Design
+    </h1>
+
+    <h2>David Levy - D&amp;D Campaign</h2>
+
+    <div class="imggrid">
+      <img src="imagess/DAVID vertical 4kpng.jpg"
+           alt="A digital drawing of an elf holding two swords.">
+      <img src="imagess/davidturnaroundsmall.jpg"
+           alt="A digital drawing of a blue and purple dragon with a cloak.">
+    </div>
+
+    <h2>Spy Concept</h2>
+
+    <div class="imggrid">
+      <img src="imagess/charactersmallcolor.png"
+           alt="A digital drawing of a reaper character sitting on a scythe.">
+      <img src="imagess/Artboard 1.png"
+           alt="A digital drawing of a nine tailed fox woman.">
+    </div>
+
+    <h2>Character Concept Extras</h2>
+
+    <div class="imggrid-3">
+      <img src="imagess/elfsmall.jpg"
+           alt="A digital drawing of an elf holding two swords.">
+      <img src="imagess/akrasmall.jpeg"
+           alt="A digital drawing of a blue and purple dragon with a cloak.">
+      <img src="imagess/reapersmall.jpg"
+           alt="A digital drawing of a reaper character sitting on a scythe.">
+      <img src="imagess/kitsune.jpg"
+           alt="A digital drawing of a nine tailed fox woman.">
+    <img src="imagess/wicked_love.jpg" alt="">
+        <img src="imagess/reaper3d.jpg" alt="">
+    </div>
+
+  </main>
+
+  <footer>
+    &copy; 2025 Mei Lin Lee-Stahr
+  </footer>
+
+</body>
+<!-- Image Lightbox Modal -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="modal-close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+<script>
+  // Add click event to all gallery images
+  document.querySelectorAll('.imggrid img, .imggrid-3 img').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', function() {
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImg');
+      modal.style.display = 'flex';
+      modalImg.src = this.src;
+      modalImg.alt = this.alt;
+    });
+  });
+
+  function closeModal() {
+    document.getElementById('imageModal').style.display = 'none';
+  }
+
+  // Close modal on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+</script>
+</html>

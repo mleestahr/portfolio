@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Illustration</title>
+  <meta name="description" content="This page showcases Mei Lin's Illustrations.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  
+  <link rel="stylesheet" href="mystylesfinal.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Average&family=Gruppo&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <div class="navbar">
+    <div class="logo" style="font-family:'Average';color: #2a4869;">MEI LIN LEE-STAHR</div>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+
+        <li class="dropdown">
+          <a href="javascript:void(0);" class="dropdown-toggle">Projects</a>
+          <ul class="dropdown-menu">
+            <li><a href="film.html">When You Give A Cat A Lemon</a></li>
+            <li><a href="ltq.html">A Letter to Qianjiang</a></li>
+            <li><a href="Projectvizwall.html">Vizwall Slides</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="javascript:void(0);" class="dropdown-toggle">Gallery</a>
+          <ul class="dropdown-menu">
+            <li><a href="CharacterDesign.html">Character Design</a></li>
+            <li><a href="Illustration.html">Illustration</a></li>
+            <li><a href="Storyboards.html">Storyboards</a></li>
+            <li><a href="videography.html">Videography</a></li>
+          </ul>
+        </li>
+
+        <li><a href="Resume.html">Resume</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="page-container">
+
+  <h1 style="color: #2a4869; margin-bottom: 25px;">Illustration</h1>
+
+  <div class="imggrid-3">
+
+    <figure class="grid-item">
+      <img src="imagess/demonssmall.png" alt="Demons illustration">
+      <figcaption>Splash art of Viv and Deacon from the <i>Harker Academy Series</i> by Kate Golden</figcaption>
+    </figure>
+
+    <figure class="grid-item">
+      <img src="imagess/foxsmall.jpg" alt="Fox illustration">
+    </figure>
+
+    <figure class="grid-item">
+      <img src="imagess/dream.jpeg" alt="Dream illustration">
+    </figure>
+
+    <figure class="grid-item">
+      <img src="imagess/fallingsmall.jpg" alt="Falling illustration">
+    </figure>
+
+    <figure class="grid-item">
+      <img src="imagess/laikaconceptsmall.jpg" alt="Laika concept illustration">
+      <figcaption>Early viz dev for <i> Star Fetching </i> </figcaption>
+    </figure>
+
+    <figure class="grid-item">
+      <img src="imagess/phone.jpg" alt="Phone illustration">
+      <figcaption>Early viz dev for <i> Are You Home </i> </figcaption>
+    </figure>
+
+    <figure class="grid-item">
+      <img src="imagess/dreampt2.jpeg" alt="Dream Part 2 illustration">
+    </figure>
+
+    <figure class="grid-item">
+      <img src="imagess/sheep.jpg" alt="Sheep illustration">
+    </figure>
+
+    <figure class="grid-item">
+      <img src="imagess/yeonjunsmall.jpg" alt="Portrait illustration">
+      <figcaption>Color Study of Yeonjun from TXT</figcaption>
+    </figure>
+
+  </div>
+
+</main>
+
+<footer>
+  &copy; 2025 Mei Lin Lee-Stahr
+</footer>
+
+<!-- Image Lightbox Modal -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="modal-close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+<script>
+  // Add click event to all gallery images for lightbox modal
+  document.querySelectorAll('.imggrid img, .imggrid-3 img').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', function() {
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImg');
+      modal.style.display = 'flex';
+      modalImg.src = this.src;
+      modalImg.alt = this.alt;
+    });
+  });
+
+  function closeModal() {
+    document.getElementById('imageModal').style.display = 'none';
+  }
+
+  // Close modal on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>About</title>
+  <meta name="description" content="This page explains who Mei Lin is not only as an artist, but as a human being.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  
+  <link rel="stylesheet" href="mystylesfinal.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Average&family=Gruppo&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <div class="navbar">
+    <div class="logo" style="font-family:'Average';color: #2a4869;">MEI LIN LEE-STAHR</div>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+
+        <li class="dropdown">
+          <a href="javascript:void(0);" class="dropdown-toggle">Projects</a>
+          <ul class="dropdown-menu">
+            <li><a href="film.html">When You Give A Cat A Lemon</a></li>
+            <li><a href="ltq.html">A Letter to Qianjiang</a></li>
+            <li><a href="Projectvizwall.html"> Vizwall Slides </a> </li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="javascript:void(0);" class="dropdown-toggle">Gallery</a>
+          <ul class="dropdown-menu">
+            <li><a href="CharacterDesign.html">Character Design</a></li>
+            <li><a href="Illustration.html">Illustration</a></li>
+            <li><a href="Storyboards.html">Storyboards</a></li>
+            <li><a href="videography.html"> Videography </a> </li>
+          </ul>
+        </li>
+
+        <li><a href="Resume.html">Resume</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="page-container">
+  <section class="about-section">
+    <div class="about-card">
+
+      <div class="about-image">
+        <img src="imagess/meilinsmaller.jpg" alt="Portrait of Mei Lin">
+        <p class="photo-credit">(c) Ra De La Fuente 2026</p>
+      </div>
+
+      <div class="about-info">
+        <h1>ABOUT</h1>
+
+        <p>
+          I am a multimedia artist from the San Francisco Bay Area,
+          currently pursuing a Masters of Design with a specialization
+          in Animation at San Jose State University.
+        </p>
+
+        <p>
+          I hold a BA from the University of California, Santa Cruz
+          in Film and Digital Media, where I had the honor to explore
+          live action narrative and documentary filmmaking.
+        </p>
+
+        <p>
+          I specialize in illustration, animation, and dance
+          videography, and have always been drawn to how art can be
+          used to tell complex and emotionally nuanced stories.
+          I’m interested in how -- in an era of artificial intelligence
+          and political turmoil -- art can shed light on the collective
+          human condition. What differentiates a living person from
+          a machine? Why is it even more important to highlight a
+          myriad of unique experiences in the media today? I also
+          am propelled to use my artistic practice to process
+          complex emotions, make sense of hierarchical social
+          structures, and to reflect the world in which we live in.
+        </p>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="page-container">
+  &copy; 2025 Mei Lin Lee-Stahr
+</footer>
+
+<!-- Image Lightbox Modal -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="modal-close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+<script>
+  document.querySelectorAll('.about-image img').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', function() {
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImg');
+      modal.style.display = 'flex';
+      modalImg.src = this.src;
+      modalImg.alt = this.alt;
+    });
+  });
+
+  function closeModal() {
+    document.getElementById('imageModal').style.display = 'none';
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+</script>
+
+</body>
+</html>
