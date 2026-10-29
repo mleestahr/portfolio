@@ -1105,3 +1105,39 @@ footer {
         height: auto;
     }
 }
+/* ========================================
+   INTRO ART IMAGES MOBILE FIX
+   ======================================== */
+
+/* Ensure the intro art container is flexible */
+.intro-art {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Base styling for the intro character images */
+.intro-art img,
+.intro-character {
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain;
+}
+
+/* Tablet and Mobile Breakpoint */
+@media screen and (max-width: 750px) {
+    .intro-art {
+        flex-direction: row; /* Keeps them side-by-side, or change to column if you want them stacked */
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .intro-art img,
+    .intro-character {
+        width: 45% !important; /* Forces each image to take up roughly half the screen width */
+        max-width: 200px !important; /* Prevents them from getting too big on tablets */
+    }
+}
