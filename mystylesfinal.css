@@ -227,7 +227,7 @@ footer {
 .intro-info {
   flex: 1;
   min-width: 0;
-  text-align: right;
+  text-align: left;
   color: #29486d;
 }
 
@@ -245,6 +245,7 @@ footer {
   display: block;
   margin: 0;
   border-bottom: none;
+  text-align: right;
   white-space: nowrap;
 }
 
